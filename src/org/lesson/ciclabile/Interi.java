@@ -19,23 +19,35 @@ public class Interi {
 
   public void addElemento(int newNumber){
     //Create a new array
-    int[] newArray = new int[array.length+1];
+    int[] newArray;
+    // Check if the array in not initialized
+    if(this.array == null){
+      this.array = new int[1];
+      array[0] = newNumber;
+      return;
+    }
+    
+    newArray = new int[this.array.length+1];
 
     //Copy the old array in the new one
-    for(int i = 0; i < array.length; i++){
-      newArray[i] = array[i];
+    for(int i = 0; i < this.array.length; i++){
+      newArray[i] = this.array[i];
     }
 
     //Add the new number
-    newArray[array.length-1] = newNumber;
+    newArray[this.array.length-1] = newNumber;
 
     //Overwrite the new array in the old one
-    array = newArray;
+    this.array = newArray;
   }
   
   int indexElementoSuccessivo = 0;
   // Return a piece of this.array on each call
   public int getElementoSuccessivo(){
+    // Check if the array is not initialized
+    if(this.array == null)
+      return -1;
+
     // Reset the index if it's out the bound
     if(indexElementoSuccessivo == this.array.length)
       indexElementoSuccessivo = 0;
@@ -46,6 +58,10 @@ public class Interi {
 
   // Check if I have already scrolled the entire this.array
   public boolean hasAncoraElementi(){
+    // Check if the array is not initialized
+    if(this.array == null)
+      return false;
+
     if(indexElementoSuccessivo != this.array.length)
       return true;
 
