@@ -40,7 +40,7 @@ public class Interi {
     this.array = newArray;
   }
   
-  int indexElementoSuccessivo = 0;
+  private int indexElementoSuccessivo = 0;
   // Return a piece of this.array on each call
   public int getElementoSuccessivo(){
     // Check if the array is not initialized
