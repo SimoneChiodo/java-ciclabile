@@ -18,8 +18,6 @@ public class Interi {
   // Functions ---------------
 
   public void addElemento(int newNumber){
-    //Create a new array
-    int[] newArray;
     // Check if the array in not initialized
     if(this.array == null){
       this.array = new int[1];
@@ -27,7 +25,8 @@ public class Interi {
       return;
     }
     
-    newArray = new int[this.array.length+1];
+    //Create a new array
+    int[] newArray = new int[this.array.length+1];
 
     //Copy the old array in the new one
     for(int i = 0; i < this.array.length; i++){
@@ -35,7 +34,7 @@ public class Interi {
     }
 
     //Add the new number
-    newArray[this.array.length-1] = newNumber;
+    newArray[this.array.length] = newNumber;
 
     //Overwrite the new array in the old one
     this.array = newArray;

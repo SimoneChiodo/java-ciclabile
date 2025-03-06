@@ -11,6 +11,11 @@ public class Main {
     System.out.println("\nAggiungi un numero: ");
     Scanner scanner = new Scanner(System.in);
     array.addElemento(scanner.nextInt());
+    System.out.printf("Controllo se l'array ha ancora elementi: %b", array.hasAncoraElementi());
+    System.out.printf("\nPrendo il prossimo elemento dall'array: %d", array.getElementoSuccessivo());
+    System.out.printf("\nControllo se l'array ha ancora elementi: %b", array.hasAncoraElementi());
+    System.out.println("\nAggiungi un numero: ");
+    array.addElemento(scanner.nextInt());
     scanner.close();
     System.out.printf("Controllo se l'array ha ancora elementi: %b", array.hasAncoraElementi());
     System.out.printf("\nPrendo il prossimo elemento dall'array: %d", array.getElementoSuccessivo());
