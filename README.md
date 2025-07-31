@@ -1,19 +1,17 @@
-# Esercizio
+# Classe per ciclare elementi interi in un array
 
-Vogliamo realizzare una classe che contenga un elenco di interi e che ci permetta di ciclarli (dal primo all’ultimo).
+## Descrizione
 
-Dovrà offrire due metodi :
+In questo esercizio dovrai realizzare una classe in JavaScript che gestisca un elenco di numeri interi memorizzati internamente come un array nativo (non si possono usare ArrayList o iteratori esterni).
 
-- int getElementoSuccessivo() (che restituisce il prossimo elemento rispetto all’ultima volta che è stato invocato. Cioè la prima volta restituisce il primo elemento, la seconda volta il secondo, …)
-- boolean hasAncoraElementi() (che deve restituire true se ci sono ancora elementi da restituire)
+### Requisiti:
 
-La classe deve avere un costruttore che prende come parametro un array di interi (che sarà l’elenco che viene gestito internamente)
+- La classe deve avere un costruttore che accetta un array di interi.
+- Deve mantenere internamente l’array.
+- Deve offrire i seguenti metodi:
 
-Internamente alla classe vogliamo mantenere l’elenco di interi come array, no ArrayList o simili.
-
-Bonus :
-prevedere anche un costruttore che non prenda parametri e un metodo addElemento che permetta di aggiungere un nuovo intero all’elenco da ciclare.
-
-### Nota bene:
-
-Vanno utilizzati solo gli array nativi e quindi non è possibile usare iterator vari.
+  - `getElementoSuccessivo()`: restituisce il prossimo elemento rispetto all’ultima chiamata (la prima chiamata restituisce il primo elemento, la seconda il secondo, e così via).
+  
+  - `hasAncoraElementi()`: ritorna `true` se ci sono ancora elementi da ciclare, `false` altrimenti.
+  
+- **Bonus**: implementare un costruttore senza parametri (array iniziale vuoto) e un metodo `addElemento` per aggiungere nuovi interi all’elenco.
